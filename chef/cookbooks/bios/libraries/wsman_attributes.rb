@@ -245,7 +245,11 @@ class WSMANAttributes
     attrs << h
     h = self.attributes("DCIM_NICAttribute")
     attrs << h
-    h = self.attributes("DCIM_iDRACCardAttribute")
+    h = self.attributes("DCIM_iDRACCardString")
+    attrs << h
+    h = self.attributes("DCIM_iDRACCardInteger")
+    attrs << h
+    h = self.attributes("DCIM_iDRACCardEnumeration")
     attrs << h
     h = self.attributes("DCIM_RAIDAttribute")
     attrs << h
