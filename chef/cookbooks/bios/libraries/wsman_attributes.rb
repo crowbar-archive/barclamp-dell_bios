@@ -124,7 +124,7 @@ class WSMANAttributes
                      "ElementName", "Description", "Caption", "IsOrderedList",
                      "PossibleValuesDescription", "StringType", "ValueExpression",
                      "PossibleValues", "Code", "Value", "Subcode", "Reason", "Detail", "FaultDetail", "Text" ]
-      @item_list = [ "Fault", "DCIM_BIOSinteger", "DCIM_BIOSEnumeration", "DCIM_BIOSString", 
+      @item_list = [ "Fault", "DCIM_BIOSInteger", "DCIM_BIOSEnumeration", "DCIM_BIOSString", 
                      "DCIM_NICInteger", "DCIM_NICString", "DCIM_NICEnumeration",
                      "DCIM_RAIDInteger", "DCIM_RAIDString", "DCIM_RAIDEnumeration",
                      "DCIM_LCInteger", "DCIM_LCString", "DCIM_LCEnumeration",
@@ -241,7 +241,7 @@ class WSMANAttributes
     attrs << h
     h = self.attributes("DCIM_BIOSString")
     attrs << h
-    h = self.attributes("DCIM_BIOSinteger")
+    h = self.attributes("DCIM_BIOSInteger")
     attrs << h
     h = self.attributes("DCIM_NICAttribute")
     attrs << h
@@ -591,7 +591,7 @@ def test_build_config_json(opts)
   attrs << h
   h = wsman_attributes.attributes("DCIM_BIOSString")
   attrs << h
-  h = wsman_attributes.attributes("DCIM_BIOSinteger")
+  h = wsman_attributes.attributes("DCIM_BIOSInteger")
   attrs << h
   h = wsman_attributes.attributes("DCIM_NICAttribute")
   attrs << h
