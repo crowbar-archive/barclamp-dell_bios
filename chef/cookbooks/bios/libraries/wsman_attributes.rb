@@ -356,7 +356,12 @@ class WSMANAttributes
     ## boot sources if the bios attributes set the pending mode to UEFI ##
     ## The config job is created by the calling method..                ##
     if (class_name == "DCIM_BIOSService")
-      return_val, reboot = @wsman.check_and_handle_boot_sources()
+      rebootFlag = false
+      return_val, rebootFlag = @wsman.check_and_handle_boot_sources()
+      #override what the method returned...basically nothing may have happened
+      # in the check and handle boot sources method...but we still need to reboot
+      # to set the attributes
+      reboot = true if (!reboot and rebootFlag)  
     end
     ## End boot manipulation hack
 
