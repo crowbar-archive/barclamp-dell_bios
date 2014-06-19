@@ -54,6 +54,7 @@
   "deployment": {
     "dell_bios": {
       "crowbar-revision": 0,
+      "crowbar-applied": false,
       "element_states": {
         "dell_bios": [ "update", "hardware-installing", "hardware-updating" ],
         "dell_bios_tools": [ "discovering" ]
